@@ -18,6 +18,11 @@ const routes = [
         path: 'privacy',
         name: 'Privacy',
         component: () => import('@/views/Privacy.vue'),
+      },
+      {
+        path: 'conditions',
+        name: 'Conditions',
+        component: () => import('@/views/Conditions.vue'),
       }
     ],
   },

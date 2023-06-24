@@ -21,6 +21,12 @@ export default {
             " information personnelle.",
             "description_3": "Si vous avez quelque question que ce soit à propos de cette politique de confidentialité, veuillez"+
             " me contacter à laurent.bernabe{'@'}gmail.com."
+        },
+        "conditions": {
+            "title": "Conditions d'utilisation",
+            "description": "Aucune condition d'utilisation particulière n'est requise pour Finales d'Echecs Basiques. Cette application est"+
+            " uniquement destinée à aider les joueurs d'échecs pour améliorer leur jeu, et n'inclut aucun contenu qui pourrait être nuisible,"+
+            " violent ou choquant.",
         }
     }
 };

@@ -18,6 +18,12 @@ export default {
             "description_2": "Privacy of my product users is important to me. I do not collect any identifiable"+
             " information about my users. I do not store or transmit any personal information.",
             "description_3": "If you have any questions about this Privacy Policy please contact me at laurent.bernabe{'@'}gmail.com."
+        },
+        "conditions": {
+            "title": "Use conditions",
+            "description": "No particular use condition is required for Basic Chess Endgames."+
+            " This application is only targeted to help chess players to improve their play, and do not include any content that could be "+
+            "harmful, violent or shocking.",
         }
     }
 };

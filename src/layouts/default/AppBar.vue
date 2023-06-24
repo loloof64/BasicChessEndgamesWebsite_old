@@ -17,6 +17,11 @@
         <v-list-item prepend-icon="mdi-security" :title="t('pages.privacy.title')">
         </v-list-item>
       </router-link>
+
+      <router-link to="/conditions">
+        <v-list-item prepend-icon="mdi-baby-carriage" :title="t('pages.conditions.title')">
+        </v-list-item>
+      </router-link>
     </v-list>
   </v-navigation-drawer>
 </template>
