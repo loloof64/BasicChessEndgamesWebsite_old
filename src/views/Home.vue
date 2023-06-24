@@ -1,18 +1,17 @@
 <template>
-  <div class="content">
+  <v-main class="content">
     <p>{{ $t('pages.home.description_1') }}</p>
     <br />
     <p>{{ $t('pages.home.description_2') }}<br />{{ $t('pages.home.description_3') }}</p>
-  </div>
+  </v-main>
 </template>
 
 <script setup>
-import { useLocale } from 'vuetify'
-const t = useLocale();
 </script>
 
 <style scoped>
 .content {
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 </style>

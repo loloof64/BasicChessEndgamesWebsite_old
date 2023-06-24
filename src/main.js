@@ -23,8 +23,10 @@ import { createI18n } from 'vue-i18n'
 import { registerPlugins } from '@/plugins'
 
 const i18n = createI18n({
+    legacy: false,
     locale: getNavigatorLanguage(),
     fallbackLocale: 'en',
+    globalInjection: true,
     messages,
 })
 
