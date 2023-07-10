@@ -3,6 +3,7 @@ export default {
     'pages': {
         'home': {
             'title': 'Accueil',
+            'title_shortcut': 'Accueil',
             'description_1': "Finales d'Echecs Basiques est une application Android dans laquelle vous"
             +" choisissez un type de finale, et le périphérique génère une position pour vous.",
             'description_2': "Ensuite vous pourrez vous entrainer dans cette position contre votre périphérique.",
@@ -10,7 +11,8 @@ export default {
             " les fins de parties."
         },
         'privacy': {
-            'title': 'Confidentialité',
+            'title': 'Politique de confidentialité',
+            'title_shortcut': 'Confidentialité',
             'description_1': "Cette page est utilisée pour vous informer sur les politiques de collecte, d'utilisation et"+
             " divulgation d'informations personnelles pour l'application, Finales d'Echecs Basiques. Laurent Bernabe "+
             "respecte la vie privée de utilisateurs et s'engage à protéger les informations de l'utilisateur, que ce soit "+
@@ -24,6 +26,7 @@ export default {
         },
         "conditions": {
             "title": "Conditions d'utilisation",
+            "title_shortcut": "Conditions d'utilisation",
             "description": "Aucune condition d'utilisation particulière n'est requise pour Finales d'Echecs Basiques. Cette application est"+
             " uniquement destinée à aider les joueurs d'échecs pour améliorer leur jeu, et n'inclut aucun contenu qui pourrait être nuisible,"+
             " violent ou choquant.",
