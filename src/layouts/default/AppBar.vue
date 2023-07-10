@@ -9,17 +9,17 @@
   <v-navigation-drawer v-model="drawer" location="left" temporary>
     <v-list>
       <router-link to="/">
-        <v-list-item prepend-icon="mdi-home" :title="t('pages.home.title')">
+        <v-list-item prepend-icon="mdi-home" :title="t('pages.home.title_shortcut')">
         </v-list-item>
       </router-link>
 
       <router-link to="/privacy">
-        <v-list-item prepend-icon="mdi-security" :title="t('pages.privacy.title')">
+        <v-list-item prepend-icon="mdi-security" :title="t('pages.privacy.title_shortcut')">
         </v-list-item>
       </router-link>
 
       <router-link to="/conditions">
-        <v-list-item prepend-icon="mdi-baby-carriage" :title="t('pages.conditions.title')">
+        <v-list-item prepend-icon="mdi-baby-carriage" :title="t('pages.conditions.title_shortcut')">
         </v-list-item>
       </router-link>
     </v-list>
