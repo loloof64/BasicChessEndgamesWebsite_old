@@ -8,7 +8,14 @@ export default {
             +" choisissez un type de finale, et le périphérique génère une position pour vous.",
             'description_2': "Ensuite vous pourrez vous entrainer dans cette position contre votre périphérique.",
             'description_3': "Le périphérique est fixé à son niveau maximal, ce qui représente un entraînement idéal pour" +
-            " les fins de parties."
+            " les fins de parties.",
+            'section_home': "La page d'accueil",
+            'section_home_description': "Depuis la page d'accueil, vous pouvez choisir la position à générer. "+
+            "Une position dont l'icône est un trophée aura pour objectif le gain, sinon vous devrez tenter de faire nulle.",
+            "section_game": "La page de jeu",
+            "section_game_description": "Dans la page de jeu, vous pourrez visionner les coups joués une fois la partie terminée. "+
+            "Mais vous pourrez aussi recommencer depuis la position générée. Enfin, vous pourrez renverser l'orientation de l'échiquier mais aussi "+
+            "stopper la partie prématurément."
         },
         'privacy': {
             'title': 'Politique de confidentialité',

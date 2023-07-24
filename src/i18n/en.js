@@ -7,7 +7,14 @@ export default {
             'description_1': 'Basic Chess Endgames is an Android application in which you choose'
             +' an endgame type, and the device generate a position for you.',
             'description_2': "Then you'll be able to train yourself in this position against the device.",
-            'description_3': "The device is at its maximum level, which is good for training endgames."
+            'description_3': "The device is at its maximum level, which is good for training endgames.",
+            'section_home': "The home page",
+            'section_home_description': "From the home page, you can select the position you want to generate. A position which leading icon "+
+            "is a trophy will have a winning goal, otherwise you will have to try to make a draw.",
+            "section_game": "The game page",
+            "section_game_description": "In the game page, you'll also have the ability to review the moves played once the game is over."+
+            " But you'll also be able to restart from the generated position. Finally, you'll also be able to reverse the "+
+            "board side, and also to stop the game prematurely."
         },
         'privacy': {
             'title': 'Privacy policy',
