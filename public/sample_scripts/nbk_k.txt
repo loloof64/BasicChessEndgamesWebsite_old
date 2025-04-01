@@ -1,0 +1,118 @@
+# player king constraints
+
+
+
+
+
+
+
+
+-- player king's constraints
+
+isRightFile = (file == FileC) or (file == FileF)
+isRightRank = (rank == Rank3) or (rank == Rank6)
+
+result = isRightFile and isRightRank
+
+@@@@@@
+
+# computer king constraints
+
+
+
+
+
+
+
+-- computer king's constraints
+
+isRightFile = ((file >= FileA) and (file <= FileC)) or ((file >= FileF) and (file <= FileH))
+isRightRank = (rank == Rank1) or (rank == Rank8)
+
+result = isRightFile and isRightRank
+
+@@@@@@
+
+# kings mutual constraints
+
+
+
+
+
+
+
+
+-- kings' mutual constraints
+
+bothKingsOnLeftSide = ((playerKingFile >= FileA) and (playerKingFile <= FileD)) and ((computerKingFile >= FileA) and (computerKingFile <= FileD))
+bothKingsOnRightSide = ((playerKingFile >= FileE) and (playerKingFile <= FileH)) and ((computerKingFile >= FileE) and (computerKingFile <= FileH))
+
+matchRightFiles = bothKingsOnLeftSide or bothKingsOnRightSide
+matchRightRanks = ((playerKingRank == Rank3) and (computerKingRank == Rank1)) or ((playerKingRank == Rank6) and (computerKingRank == Rank8))
+
+result = matchRightFiles and matchRightRanks
+
+@@@@@@
+
+# other pieces counts
+
+
+
+
+
+
+
+
+
+
+player knight : 1
+player bishop : 1
+
+@@@@@@
+
+# other pieces global constraints
+
+[player knight]
+
+
+
+
+
+
+
+
+
+-- player knight's global constraints
+
+isRightFile = file == playerKingFile
+isRightRank = ((playerKingRank == Rank3) and (rank == Rank2)) or((playerKingRank == Rank6) and (rank == Rank7))
+
+result = isRightFile and isRightRank
+
+€€€
+
+[player bishop]
+
+
+-- player bishop's global constraints
+
+isRightFile = file == playerKingFile
+isRightRank = ((playerKingRank == Rank3) and (rank == Rank4)) or((playerKingRank == Rank6) and (rank == Rank5))
+
+isWhiteCellBishop = (file+rank)%2 > 0
+if (playerKingFile < FileE) then oppositeAngleFile = FileH else oppositeAngleFile = FileA end
+oppositeAngleRank = computerKingRank
+oppositeAngleIsWhiteCell = (oppositeAngleFile+oppositeAngleRank)%2 > 0
+sameColorAsOppositeAngle = isWhiteCellBishop == oppositeAngleIsWhiteCell
+
+result = isRightFile and isRightRank and sameColorAsOppositeAngle
+
+€€€
+
+
+
+@@@@@@
+
+# goal
+
+win

@@ -39,5 +39,11 @@ export default {
             "description": "No se requiere una condición de uso particular para Finales Básicos de Ajedrez. Esta aplicación solo está destinada a "+
             "ayudar a los jugadores de ajedrez para mejorar su juego y no incluir ningún contenido que pueda ser dañino, violento o impactante.",
         }
+    },
+    'scripts': {
+        'titles': {
+            'nbk_k': 'Caballo+Alfil+Rey vs Rey (método W)',
+            'qk_rk': 'Dama+Rey vs Torre+Rey (posición de Philidor)'
+        }
     }
 };

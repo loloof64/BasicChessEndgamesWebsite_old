@@ -1,0 +1,127 @@
+# player king constraints
+
+
+
+--- player king constraints
+
+isRightFile = (file == FileC) or (file == FileF)
+isRightRank = (rank == Rank3) or (rank == Rank6)
+
+result = isRightFile and isRightRank
+
+@@@@@@
+
+# computer king constraints
+
+
+
+--- computer king constraints
+
+isRightFile = (file == FileA) or (file == FileB) or (file == FileG) or (file == FileH)
+isRightRank = (rank == Rank1) or (rank == Rank2) or (rank == Rank7) or (rank == Rank8)
+
+result = isRightFile and isRightRank
+
+@@@@@@
+
+# kings mutual constraints
+
+--- kings mutual constraints
+
+fileDistance = math.abs(computerKingFile - playerKingFile);
+rankDistance = math.abs(computerKingRank - playerKingRank);
+
+areInKnightDistanceEachOther = ((fileDistance == 2) and (rankDistance == 1)) or ((fileDistance == 1) and (rankDistance == 2))
+
+result = areInKnightDistanceEachOther
+
+@@@@@@
+
+# other pieces counts
+
+
+
+player queen : 1
+computer rook : 1
+
+@@@@@@
+
+# other pieces global constraints
+
+[player queen]
+
+
+
+--- player queen global constraints
+
+--- useful variables
+
+computerKingOnEdgeFile = (computerKingFile == FileA) or (computerKingFile == FileH)
+computerKingOnBeforeEdgeFile = (computerKingFile == FileB) or (computerKingFile == FileG)
+
+computerKingOnEdgeRank = (computerKingRank == Rank1) or (computerKingRank == Rank8)
+computerKingOnBeforeEdgeRank = (computerKingRank == Rank2) or (computerKingRank == Rank7)
+
+--- file constraints
+
+inCenterFile = (file == FileD) or (file == FileE)
+inEdgeFile = (file == FileA) or (file == FileH)
+
+inCenterFileIfOppositeKingOnBeforeEdgeRank = computerKingOnBeforeEdgeRank and inCenterFile
+inEdgeFileIfOppositeKingOnEdgeRank = computerKingOnEdgeRank and inEdgeFile
+
+distanceByThreeFilesFromOppositeKingIfOppositeKingOnBeforeEdgeRank = computerKingOnBeforeEdgeRank and (math.abs(computerKingFile - file) == 3)
+distanceByThreeRanksFromOppositeKingIfOppositeKingOnEdgeRank = computerKingOnEdgeRank and (math.abs(computerKingRank - rank) == 3)
+
+rightFile = (inCenterFileIfOppositeKingOnBeforeEdgeRank or inEdgeFileIfOppositeKingOnEdgeRank) and (distanceByThreeFilesFromOppositeKingIfOppositeKingOnBeforeEdgeRank or distanceByThreeRanksFromOppositeKingIfOppositeKingOnEdgeRank)
+
+--- rank constraints
+
+distanceByOneRankIfOppositeKingOnBeforeEdgeRank = computerKingOnBeforeEdgeRank and (math.abs(computerKingRank - rank) == 1)
+distanceByThreeRanskIfOppositeKingOnEdgeRank = computerKingOnEdgeRank and (math.abs(computerKingRank - rank) == 3)
+
+distanceByOneRankIfOppositeKingOnBeforeEdgeFile = computerKingOnBeforeEdgeFile and (math.abs(computerKingFile - file) == 1)
+distanceByThreeRanskIfOppositeKingOnEdgeFile = computerKingOnEdgeFile and (math.abs(computerKingFile - file) == 3)
+
+onEdgeFile = (file == FileA) or (file == FileH)
+onEdgeRank = (rank == Rank1) or (rank == Rank8)
+
+onEdgeFileIfOpponentKingOnEdgeRank = onEdgeFile and computerKingOnEdgeRank
+onEdgeRankIfOpponentKingOnBeforeEdgeRank = onEdgeRank and computerKingOnBeforeEdgeRank
+
+rightRank = (distanceByOneRankIfOppositeKingOnBeforeEdgeRank or distanceByThreeRanskIfOppositeKingOnEdgeRank) and (distanceByOneRankIfOppositeKingOnBeforeEdgeFile or distanceByThreeRanskIfOppositeKingOnEdgeFile) and (onEdgeFileIfOpponentKingOnEdgeRank or onEdgeRankIfOpponentKingOnBeforeEdgeRank)
+
+--- final result
+
+result = rightFile and rightRank
+
+€€€
+
+[computer rook]
+
+
+
+--- computer rook constraints
+
+computerKingOnEdgeRank = (computerKingRank == Rank1) or (computerKingRank == Rank8)
+computerKingOnBeforeEdgeRank = (computerKingRank == Rank2) or (computerKingRank == Rank7)
+
+onSameFileAsComputerKing = computerKingFile == file
+onSameRankAsComputerKing = computerKingRank == rank
+
+distFile = math.abs(file - computerKingFile)
+distRank = math.abs(rank - computerKingRank)
+onFileNearComputerKingFile = distFile == 1
+onRankNearComputerKingRank = distRank == 1
+
+result = (computerKingOnEdgeRank and onSameFileAsComputerKing and onRankNearComputerKingRank) or (computerKingOnBeforeEdgeRank and onSameRankAsComputerKing and onFileNearComputerKingFile)
+
+€€€
+
+
+
+@@@@@@
+
+# goal
+
+win

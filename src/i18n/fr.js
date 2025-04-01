@@ -38,5 +38,11 @@ export default {
             " uniquement destinée à aider les joueurs d'échecs pour améliorer leur jeu, et n'inclut aucun contenu qui pourrait être nuisible,"+
             " violent ou choquant.",
         }
+    },
+    'scripts': {
+        'titles': {
+            'nbk_k': 'Cavalier+Fou+Roi contre Roi (méthode W)',
+            'qk_rk': 'Dame+Roi contre Tour+Roi (position de Philidor)'
+        }
     }
 };

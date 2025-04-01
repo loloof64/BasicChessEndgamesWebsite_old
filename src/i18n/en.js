@@ -35,5 +35,11 @@ export default {
             " This application is only targeted to help chess players to improve their play, and do not include any content that could be "+
             "harmful, violent or shocking.",
         }
+    },
+    'scripts': {
+        'titles': {
+            'nbk_k': 'Knight+Bishop+King vs King (W method)',
+            'qk_rk': 'Queen+King vs Rook+King (Philidor\'s position)'
+        }
     }
 };
